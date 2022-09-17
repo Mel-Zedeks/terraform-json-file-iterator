@@ -1,0 +1,89 @@
+{
+  "resource_groups": [
+    {
+      "name": "example_resource1",
+      "location": "West Europe",
+      "tags": {
+      },
+      "children": [
+        {
+          "parent_name": "example_resource1",
+          "child_type": "virtual_wan",
+          "resource_group_name": "parent_resource_group_name",
+          "name": "wan1",
+          "type": "wan_type1",
+          "location": "parent_location",
+          "tags": "",
+          "children": [
+            {
+              "parent_name": "wan1",
+              "child_type": "virtual_hub",
+              "resource_group_name": "parent_resource_group_name",
+              "name": "hub1",
+              "location": "",
+              "virtual_wan_id": "parent_id",
+              "address_prefix": "",
+              "tags": "",
+              "children": [
+                {
+                  "child_type": "firewall_policy",
+                  "name": "",
+                  "resource_group_name": "",
+                  "location": ""
+                },
+                {
+                  "child_type": "firewall",
+                  "name": "",
+                  "location": "",
+                  "resource_group_name": "wan_parent_id",
+                  "sku_name": "",
+                  "sku_tier": "",
+                  "virtual_hub_id": "firewall_parent_id",
+                  "firewall_policy_id": "sibling_id"
+                }
+              ]
+            },
+            {
+              "parent_name": "wan1",
+              "child_type": "virtual_hub",
+              "resource_group_name": "parent_resource_group_name",
+              "name": "hub2",
+              "location": "",
+              "virtual_wan_id": "parent_id",
+              "address_prefix": "",
+              "tags": "",
+              "children": []
+            }
+          ]
+        },
+        {
+          "parent_name": "example_resource1",
+          "child_type": "virtual_wan",
+          "resource_group_name": "parent_resource_group_name",
+          "name": "wan2",
+          "type": "wan_type1",
+          "location": "parent_location",
+          "tags": "",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "example_resource2",
+      "location": "East Europe",
+      "tags": {
+      },
+      "children": [
+        {
+          "parent_name": "example_resource2",
+          "child_type": "virtual_wan",
+          "resource_group_name": "parent_resource_group_name",
+          "name": "wan1",
+          "location": "parent_location",
+          "type": "wan_type1",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

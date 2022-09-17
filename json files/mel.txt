@@ -1,0 +1,110 @@
+
+"resource_group":{
+"name":"",
+"location":"",
+"tags":"",
+"children":[
+"virtual_wan":[
+{
+"resource_group_name" //
+"name":"",
+"type":"",
+"location":"",
+"tags":"",
+"children":[
+
+]
+}
+],
+virtual_hub{
+resource_group_name //
+name
+location
+virtual_wan_id //
+address_prefix
+tags
+}
+]
+}
+
+firewall:
+firewall{
+name
+location
+resource_group_name //
+sku_name
+sku_tier
+virtual_hub {
+virtual_hub_id
+}
+firewall_policy_id
+}
+
+firewall_policy:{
+name
+resource_group_name
+location
+}
+
+
+express :
+route_circuit:{
+name
+resource_group_name //
+location
+service_provider_name
+peering_location
+bandwidth_in_mbps
+sku
+tags
+}
+route_gateway:{
+name
+resource_group_name //
+location
+virtual_hub_id //
+scale_units
+tags
+}
+route_port:{
+name
+resource_group_name //
+location
+peering_location
+bandwidth_in_gbps
+encapsulation
+}
+route_circuit_peering:{
+peering_type
+express_route_circuit_name //
+resource_group_name //
+shared_key
+peer_asn
+primary_peer_address_prefix
+secondary_peer_address_prefix
+vlan_id
+}
+route_connection :{
+name
+express_route_gateway_id //
+express_route_circuit_peering_id //
+}
+
+firewall:
+firewall{
+name
+location
+resource_group_name //
+sku_name
+sku_tier
+virtual_hub {
+virtual_hub_id
+}
+firewall_policy_id
+}
+
+firewall_policy:{
+name
+resource_group_name
+location
+}
